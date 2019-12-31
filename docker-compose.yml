@@ -1,0 +1,45 @@
+version: "3" 
+services:
+
+  gcc:
+    container_name: gcc
+    image: gcc:latest
+    volumes:
+      - ./workspaces/c:/app
+    working_dir: /app
+    command:
+      - /bin/sh
+      - -c
+      - |
+        gcc --version
+        make
+
+  fortran:
+    container_name: fortran
+    image: fszostak/python-c-fortran:python-3.8
+    volumes:
+      - ./workspaces:/app
+    working_dir: /app/fortran
+    command:
+      - /bin/sh
+      - -c
+      - |
+        python -m numpy.f2py -c -m mylibf mylibf.f -DNPY_NO_DEPRECATED_API
+    depends_on:
+      - gcc
+
+  python:
+    container_name: python
+    image: fszostak/python-c-fortran:python-3.8
+    volumes:
+      - ./workspaces:/app
+    working_dir: /app/python
+    command:
+      - /bin/sh
+      - -c
+      - |
+        cp /app/fortran/mylibf.cpython-38-x86_64-linux-gnu.so /app/python/mylibf.so
+        python --version
+        python my_script.py
+    depends_on:
+      - fortran
