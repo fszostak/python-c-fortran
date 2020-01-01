@@ -1,4 +1,4 @@
-# python calling C/Fortran libraries
+# Python script calling C/Fortran libraries
 
 ```
 $ docker-compose up python
