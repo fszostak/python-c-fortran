@@ -21,4 +21,7 @@ python     | Done
 python exited with code 0
 ```
 
-Reference: https://docs.scipy.org/doc/numpy/f2py/python-usage.html?highlight=python
+References: 
+https://www.numfys.net/howto/F2PY/
+https://docs.scipy.org/doc/numpy/f2py/python-usage.html?highlight=python
+https://www-uxsup.csx.cam.ac.uk/courses/moved.PythonFortran/f2py.pdf
