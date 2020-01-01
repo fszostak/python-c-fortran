@@ -22,6 +22,6 @@ python exited with code 0
 ```
 
 References: 
-https://www.numfys.net/howto/F2PY/
-https://docs.scipy.org/doc/numpy/f2py/python-usage.html?highlight=python
-https://www-uxsup.csx.cam.ac.uk/courses/moved.PythonFortran/f2py.pdf
+1) https://www.numfys.net/howto/F2PY/
+2) https://docs.scipy.org/doc/numpy/f2py/python-usage.html?highlight=python
+3) https://www-uxsup.csx.cam.ac.uk/courses/moved.PythonFortran/f2py.pdf
